@@ -683,6 +683,7 @@ class Renderer(renderer.Renderer):
                 else:
                     slave_cfg['MASTER'] = iface_name
                     slave_cfg['SLAVE'] = True
+                    slave_cfg.drop('HWADDR')
 
     @classmethod
     def _render_vlan_interfaces(cls, network_state, iface_contents, flavor):
